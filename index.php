@@ -27,17 +27,8 @@ include ("config/config.php");
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-10">
-
                         <div class="mb-3">
                             <a href="kelola/tambah.php" type="button" class="btn btn-primary">Tambah</a>
-                            <div class="container-fluid mx-auto">
-                                <form class="d-flex ">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                            </div>
-
 
                             <table class="table table-hover table-bordered border-primary mt-3">
                                 <thead class="table-dark">
