@@ -54,7 +54,9 @@
                         <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukkan No.Telp">
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat">
+                        <div class="form-floating">
+                            <textarea class="form-control col-sm" id="alamat" name="alamat"></textarea>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <button type='submit' class='btn btn-primary me-2'>Tambah</button>
