@@ -1,18 +1,36 @@
 <?php 
+include ("config/config.php");
+ if(isset($_POST['btnLogin'])){
+    
+ $username = htmlspecialchars($_POST['username']);
+ $password = htmlspecialchars($_POST['password']);
+ 
+ $query = mysqli_query($konek, "select * from user where username='$username'");
 
-$username = $_POST['username'];
-$password = md5($_POST['password']);
- 
-$login = mysql_query("select * from user where username='$username' and password='$password'");
-$cek = mysql_num_rows($login);
- 
-if($cek > 0){
-	session_start();
-	$_SESSION['username'] = $username;
-	$_SESSION['status'] = "login";
-	header("location:admin/index.php");
+
+$countdata = mysqli_num_rows($query);
+$data = mysqli_fetch_array($query);
+
+if($countdata>0){
+    if (password_verify($password, $data['password'])){
+            } 
+            else{
+                echo "password salah";
+                echo $username;
+                echo $data['username'];
+                echo $password;
+                echo $data['password'];
+            }
 }else{
-	header("location:index.php");	
+    echo "akun tidak tersedia";
+    echo $username;
+    echo $data['password'];
+    echo $password;
+    echo $data['password'];
 }
- 
+
+
+ }
+
+
 ?>
